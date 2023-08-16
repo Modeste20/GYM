@@ -1,0 +1,157 @@
+.heros{
+    text-align: center;
+    color:#000;
+    min-height:400px;
+    padding:3rem 0;
+}
+
+.heros > .container{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heros-p{
+    margin-top:1rem;
+}
+
+.heros-sexe{
+    width:100%;
+    max-width: 15.625em;
+    margin:2.8em auto 0;
+    border-radius: 5px;
+    height:3.75em;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    cursor:pointer;
+}
+
+.heros-sexe > span{
+    flex:1;
+    height:100%;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #dadad0;
+}
+
+.heros-sexe > .active{
+    background-color: #a1a14e;
+    color:#fff
+}
+
+
+@media only screen and (min-width:992px){
+    .heros-container{
+        width:61.25rem;
+    }
+}
+
+/*Pricing plan*/
+
+.pricing{
+    margin-bottom: 2rem;
+}
+
+.pricing-man {
+    display:flex;
+    flex-direction: column;
+    gap:2.3rem;
+    flex-wrap: wrap;
+}
+
+.pricing-card{
+    padding:1.25em 0;
+}
+
+.pricing-card > .card-title{
+    text-align: center;
+}
+
+.card-ul{
+    max-width:250px;
+    margin:0 auto 1.25rem;
+}
+
+.special-badge{
+    display:block;
+    border-radius:5px;
+    padding:8px 0;
+    width:8.75rem;
+    background-color: #5c5c94;
+    color:#fff;
+    font-weight: 600;
+    margin:0.7em auto 1.3em;
+    text-align: center;
+}
+
+@media only screen and (min-width:768px){
+
+    .pricing-man {
+        gap:4%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .pricing-card{
+        width:48%;
+    }
+
+}
+
+@media only screen and (min-width:992px){
+
+    .pricing{
+        margin-bottom: 4.5rem;
+    }
+
+    .pricing-man {
+        gap:0%;
+        flex-direction: row;
+    }
+
+    .pricing-card{
+        width:28%;
+    }
+
+    .pricing-card:nth-child(2){
+        border: 3px solid #8e8e00;
+        border-radius:8px;
+    }
+}
+
+.card-price{
+    font-size:3.2rem;
+    font-weight: 900;
+    margin:1.5rem 0;
+    text-align: center;
+}
+
+.card-price > sub{
+    font-size: 1rem;
+    font-weight:400;    
+}
+
+.card-li{
+
+    padding:0.5em 0 0.5em 2.5em;
+    background-image:url(./../../medias/images/right.png); 
+    background-size:1.8em;
+    background-position:0.31rem;
+    background-repeat: no-repeat;
+
+}
+
+.card-li.forbid{
+    background-image: url('./../../medias/images/wrong.png');
+}
+
+.card-li + .card-li{
+    margin-top:0.2em;  
+}

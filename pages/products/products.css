@@ -1,0 +1,424 @@
+
+button{
+    outline:0;
+    border:none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+input[type='checkbox'],input[type='radio']{
+    appearance: none;
+    display: inline-block;
+    width:0.8rem;
+    height:0.8rem;
+    border-radius:3px;
+    border:1px solid #6f6fa9;
+    vertical-align: -2px;
+    position:relative;
+
+}
+
+input[type="checkbox"]::before,
+input[type="radio"]::before {
+    content: "✔";
+    position: absolute;
+    font-size: 0.75rem;
+    top: -3px;
+    left:1px;
+    visibility: hidden;
+    color:#ffffed;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked{
+    background-color: #6f6fa9;
+}
+
+input[type="checkbox"]:checked::before,
+input[type="radio"]:checked::before{
+    visibility: visible;
+}
+
+main > .container {
+    padding:2.5rem 0 3rem;
+}
+
+
+@media only screen and (max-width:768px){
+    .products{
+        padding-top:1rem;
+    }
+}
+
+.card {
+    padding-bottom:1.25em;
+    /*box-shadow: 0px 0px 10px #51510b38;*/
+    border:2px solid #51510b38;
+    border-radius: 10px;
+    margin:auto;
+    width:min(100%,350px);
+    transition: .6s;
+}
+
+.products article img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.products article img,
+.modal .modal-container .content > .image img{
+    max-width:100%;
+    margin:auto;
+    display: block;
+}
+
+.products article .card-header{
+    margin:0.7em 0;
+    display:flex;
+    gap:0.8rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products article .card-body .price,
+.modal .modal-container .product-description .price{
+    margin:0.7em 0 1em;
+    display:flex;
+    gap:0.7rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.products article .card-body .price ins,
+.modal .modal-container .product-description .price ins{
+    text-decoration: none;
+    font-weight:600;
+    color:#8e8e00;
+}
+
+.products article .card-body button{
+    display: block;
+    cursor:pointer;
+    width:100%;
+    padding:0.7em 0;
+    border-radius:5px;
+    
+    background:#2f2f5a;
+    color:#dfdff8;
+}
+
+.products article .card-body button:hover{
+    background:#1a1a2e;
+}
+
+.products article .card-header .review b{
+    color:#8282c8;
+    font-weight:900;
+}
+
+.products article .card-header,
+.products article .card-body{
+    padding:0 0.7rem;
+}
+
+.products article .card-header h3{
+    margin:0;
+}
+
+.products > div:first-child {
+    margin-bottom:40px;
+    text-align: right;
+}
+
+
+@media screen and (min-width:500px){
+
+    .card{
+        margin:0;
+    }
+
+    main > .container .products .products-container{
+        display:grid;
+        gap:2rem 1.3rem;
+        grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+        grid-template-rows: auto;
+        justify-items:center;
+        align-items: start;
+    }
+}
+
+
+
+@media screen and (min-width:992px){
+
+    .products > div:first-child {
+        display: none;
+    }
+
+    main > .container{
+        display: flex;
+        gap:2.7rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    main > .container form{
+        flex:1;
+    }
+
+    main > .container .products{
+        flex:3;
+    }
+}
+
+/* Form */
+
+main > .container form > .filter-header{
+    padding-bottom:1.4rem;
+    border-bottom:1px solid #1a1a01e5;
+}
+
+main > .container form .filter{
+    padding: 1rem 0;
+    border-bottom:1px solid #1a1a01e5;
+}
+
+main > .container form .filter.active{
+    padding-bottom:1.4rem;
+}
+
+
+main > .container form .filter ul li{
+    margin:0.7em 0;
+}
+
+main > .container form .filter-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main > .container form .filter-header button,
+.products > div:first-child button{
+    border:1.5px solid #1a1a01e5;
+    width:6em;
+    height:2.5em;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+main > .container form .filter-header button img{
+    vertical-align: -5px;
+}
+
+main > .container form .filter-header #hide img{
+    vertical-align: -8px;
+}
+
+
+main > .container form .filter > .filter-header + div,
+main > .container form .filter > .filter-header + ul {
+    width:0;
+    height:0;
+    overflow: hidden;
+}
+
+main > .container form .filter.active > .filter-header + div,
+main > .container form .filter.active > .filter-header + ul {
+    width:auto;
+    height:auto;
+}
+
+main > .container form .filter:not(main > .container form .filter.active) > .filter-header  #hide,
+main > .container form .filter:not(main > .container form .filter.active) > .filter-header #hide{
+    display:none
+}
+
+main > .container form .filter.active > .filter-header  #show,
+main > .container form .filter.active > .filter-header #show{
+    display:none
+}
+
+main > .container form.filters .times,
+.modal .modal-container .times{
+    position: absolute;
+    top:0;
+    right:0;
+    cursor:pointer;
+    color:#fff;
+    font-size:1.75rem;
+    transform: rotate(45deg);
+}
+
+main > .container form.filters .times::before,
+.modal .modal-container .times::before{
+    position:absolute;
+    content:'';
+    display: block;
+    background-color: #8e8e00;
+    z-index:-1;
+}
+
+main > .container form.filters .times{
+    padding:0.2em;
+    right:3px;
+}
+
+main > .container form.filters .times::before{
+    width:1.6em;
+    height:1.6em;
+    top:-12px;
+    right:-5px;
+    transform: rotate(-45deg);
+}
+
+@media only screen and (min-width:992px){
+    main > .container form.filters .times{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:992px){
+    main > .container form.filters{
+        width:min(100%,350px);
+        position:fixed;
+        top:0;
+        left:-400px;
+        bottom: 0;
+        background:#fff;
+        overflow-x: hidden;
+        padding:2.5rem 1rem 1.6rem;
+        box-shadow: 2px 0 30px #1a1a033c;
+        transition:.3s;
+        min-height:85vh;
+    }
+
+    main > .container form.filters.open{
+        left:0;
+    }
+}
+
+/* Modal */
+
+.modal.hidden{
+    display:none;
+}
+
+.modal{
+    display: block;
+    position: fixed;
+    background:#1a1a0375;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:3;
+}
+
+.modal .modal-container{
+    width:min(100%,700px);
+    height:min(400px,80vh);
+    background:#fff;
+    position: relative;
+    box-shadow: 10px 10px 50px #1a1a033c;
+    overflow: hidden;
+    padding:1.25rem
+}
+
+.modal .modal-container .times{
+    padding:0.3em;
+}
+
+.modal .modal-container .times::before{
+    width:2.4em;
+    height:2.4em;
+    top:-1.5rem;
+    right:-1rem;
+    border-radius: 50%;
+}
+
+.modal .modal-container .content{
+    display: flex;
+    align-items: center;
+    gap:25px;
+    height: 100%;
+}
+
+.modal .modal-container .content > div{
+    flex:1;
+}
+
+.modal .modal-container .content > .image{
+    height:100%;
+    display: flex;
+}
+
+.modal .modal-container .product-description button{
+    margin-top:0.7rem;
+}
+
+.modal .modal-container .product-description h3{
+    margin:0.6rem 0;
+}
+
+.modal .modal-container .product-description .price{
+    margin-top:0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.modal .modal-container .product-description .price del::before,
+.modal .modal-container .product-description .price del::after{
+    display: inline-block;
+    text-decoration: none ;
+}
+
+.modal .modal-container .product-description .price del::before{
+    content:'[';
+    margin-right:2px;
+}
+
+.modal .modal-container .product-description .price del::after{
+    content:']';
+    margin-left:2px;
+}
+
+
+@media screen and (max-width:768px) {
+
+    .modal .modal-container{
+        max-width: 400px;
+        position:fixed;
+        top:0;
+        bottom:0;
+        right:0;
+        height:100%;
+        box-sizing: border-box;
+        padding-top:50px;
+        overflow-y: auto;
+        box-shadow:-3px 0 25px #1f1f0467;
+    }
+
+    .modal .modal-container .times{
+        right:calc(100% - 35px);
+    }
+
+    .modal .modal-container .times::before{
+        top:-12px;
+        left:-20px;
+    }
+
+    .modal .modal-container .content{
+        display: block;
+        height:auto;
+        width:100%
+    }
+}

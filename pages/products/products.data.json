@@ -1,0 +1,62 @@
+[
+    {
+        "name":"Addidas Yellow Fit",
+        "rate":4.8,
+        "nbreOfRating":87,
+        "brand":"Addidas",
+        "price":"$99.00",
+        "priceBeforeReduction":"$100",
+        "image":"haltere.jpg",
+        "description":"Description of the product"
+    },
+    {
+        "name":"Nike 2",
+        "rate":3.8,
+        "nbreOfRating":10,
+        "brand":"Nike",
+        "price":"$50.00",
+        "priceBeforeReduction":"$60",
+        "image":"nike-jogging.png",
+        "description":"Quaerat fuga nam minima provident adipisci, velit molestias perspiciatis ab assumenda magnam tempore hic, similique fugiat tempora labore? Dolorum temporibus similique dignissimos."
+    },
+    {
+        "name":"Curry Shoe",
+        "rate":4.9,
+        "nbreOfRating":2500,
+        "brand":"NBA Shoe",
+        "price":"$500.00",
+        "priceBeforeReduction":"$800",
+        "image":"haltere.jpg",
+        "description":"Description of the product.Quaerat fuga nam minima provident adipisci, velit molestias perspiciatis ab assumenda magnam tempore hic, similique fugiat tempora labore? Dolorum temporibus similique dignissimos."
+    },
+    {
+        "name":"Addidas Yellow Fit",
+        "rate":3,
+        "nbreOfRating":20,
+        "brand":"Addidas",
+        "price":"$700.00",
+        "priceBeforeReduction":"$1000",
+        "image":"curl.jpg",
+        "description":"Description of the product"
+    },
+    {
+        "name":"Flyease Spot 9",
+        "rate":3.9,
+        "nbreOfRating":110,
+        "brand":"Flyease",
+        "price":"$1000.00",
+        "priceBeforeReduction":"$1500",
+        "image":"addidas.jpg",
+        "description":"Description of the product"
+    },
+    {
+        "name":"Addidas Yellow Fit",
+        "rate":4.8,
+        "nbreOfRating":87,
+        "brand":"Addidas",
+        "price":"$99.00",
+        "priceBeforeReduction":"$100",
+        "image":"nike-jogging.png",
+        "description":"Description of the product"
+    }
+]

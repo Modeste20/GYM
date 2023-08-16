@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Favicon-->
+    <link rel="icon" href="../../medias/images/favicon/favicon-48x48.png" type="image/png">
+
+    <!--stylesheets-->
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <title>Contact us</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-navbar-open"></div>
+        <div class="container">
+            <div class="container-header">
+                <a href="/" class="logo">
+                    GYM
+                </a>
+
+                <nav class="header-navigation">
+                    <div class="times header-times">
+                        <div class="icon menu-times">*</div>
+                    </div>
+                    <ul class="header-menu">
+
+                        <li class="header-item">
+                             <a href="../about/">Notre Agence</a>
+                        </li>
+
+                        <li class="header-item">
+                            <a href="../products/">Nos produits</a>
+                        </li>
+
+                        <li class="header-item">
+                            <a href="../pricing/">Nos tarifs</a>
+                        </li>
+
+                        <li class="header-item">
+                            <a href="#!" class="header-cta cta-button header-cta-mobile">Contactez-nous</a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <a href="#!" class="cta-button header-cta">
+                    Contactez-nous
+                </a>
+
+                <div class="icon menu-hamburger" id="menu-hamburger">H</div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="heros">
+
+            <video class="heros-vd" autoplay muted loop>
+                <source src="./../../medias/videos/contact-heros.mp4" type="video/mp4">
+            </video>
+
+            <div class="container">
+                <h1 class="heros-title">Contact us</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                </p>
+            </div>
+
+        </div>
+        <div class="contact">
+            <div class="container">
+                <form class="contact-form" action="../success/index.html" method="post" class="contact-form">
+                    <div>
+                        <div class="count">
+                            01
+                        </div>
+                        <label for="name">
+                            What's your name ? <br>
+                            <input class="form-elmt" type="text" name="name" id="name" placeholder="Type your full name">
+                        </label>
+                    </div>
+
+                    <div>
+                        <div class="count">
+                            02
+                        </div>
+                        <label for="email">
+                            What's your email address? <br>
+                            <input class="form-elmt" type="text" name="email" id="email" placeholder="exemple123@gmail.com">
+                        </label>
+                    </div>
+
+
+                    <div>
+                        <div class="count">
+                            03
+                        </div>
+                        <label for="phone">
+                            What's your phone number ? <br>
+                            <input class="form-elmt" type="tel" name="phone" id="phone" placeholder="+213 791107290">
+                        </label>
+                    </div>
+
+                    <div>
+                        <div class="count">
+                            04
+                        </div>
+                        <label for="services">
+                            What's services are you looking for ? <br>
+                            <select class="form-elmt" name="services" id="services">
+                                <option value="c">Collaboration</option>
+                                <option value="q">Have a question</option>
+                                <option value="o">Others</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div>
+                        <div class="count">
+                            05
+                        </div>
+                        <label for="message">
+                            What can we do for you ? <br>
+                            <textarea class="form-elmt" name="message" id="message" placeholder="Please type your message"></textarea>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="contact-btn">Send message <span class="icon">m</span></button>
+
+                </form>
+
+                <aside class="contact-asd">
+                    <address class="contact-adr">
+                        <div class="tels">
+                            <h3 class="title">Call Us</h3>
+                            <ul>
+                                <li>
+                                    +213 785698865
+                                </li>
+                                <li>
+                                    +33 785698865
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="address">
+                            <h3 class="title">Adress</h3>
+                            <p>
+                                2154 Gleen Falls Road <br>
+                                Plymouth Meeting, <br>
+                                Pennyslavia,19462
+                            </p>
+                        </div>
+
+                        <div class="social-media">
+                            <h3 class="title">Social Medias</h3>
+                            <ul>
+                                <li>
+                                    <a class="contact-link" href="">Facebook</a>
+                                </li>
+
+                                <li>
+                                    <a class="contact-link" href="">Twitter</a>
+                                </li>
+
+                                <li>
+                                    <a class="contact-link" href="">Instagram</a>
+                                </li>
+
+                                <li>
+                                    <a class="contact-link" href="">Linkedin</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </address>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <a href="/" class="footer-logo">GYM</a>
+            <nav class="footer-nav">
+                <a class="footer-link" href="../about/">About</a>
+                <a class="footer-link" href="../pricing/">pricing</a>
+                <a class="footer-link" href="../products/">Product</a>
+                <a class="footer-link" href="#!">Contact Us</a>
+            </nav>
+            <div class="footer-divider"></div>
+            <small class="footer-sm"> &copy; Copyright GYM 2023</small>
+        </div>
+    </footer>
+
+    <script src="../../index.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

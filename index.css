@@ -1,0 +1,360 @@
+
+.heros-image{
+    margin:1.25rem 0 1.875rem;
+    width:100%;
+    display: block;
+}
+
+.heros-cta {
+    margin:0.75em 0 2em;
+}
+
+.heros-title {
+    line-height:1.35;
+}
+
+.heros-txt {
+    margin:1em 0;
+}
+
+@media only screen and (min-width:301px){
+    .heros-image{
+        width:300px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .heros {
+        min-height:550px;
+        display:flex;
+        align-items: center;
+    }
+
+    .heros-image{
+        width:380px;
+    }
+}
+
+@media only screen and (min-width:800px){
+    .heros-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width:100%;
+    }
+
+    .heros-image{
+        order: 1;
+        margin:0;
+    }
+
+    .heros-content{
+        order: 0;
+        max-width:43.75rem;
+    }
+}
+
+
+/*Team Section*/
+
+.team{
+    text-align: center;
+}
+
+.team-txt {
+    margin-top:0.2em;
+}
+
+.team-members{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding:6.8rem 0 5rem;
+    gap:15px;
+}
+
+.member > .member-img{
+    margin:20px auto 15px;
+    width:10rem;
+    display: block;
+}
+
+@media only screen and (min-width:824px){
+    .member:nth-child(2){
+        margin-top:-90px;
+    }
+}
+
+/*Témoigneges*/
+
+.temoignages{
+    padding:70px 0;
+    background-color: #23230f;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    color:#ffffed;
+}
+
+.temoignages .carousel {
+    margin-top:30px;
+    position:relative;
+}
+.temoignages .carousel .carousel-dots{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    bottom: -35px;
+    right:0;
+    left:0;
+    height:45px;
+}
+
+.temoignages .carousel .carousel-dots .dot{
+    width:12px;
+    height:12px;
+    background: #ffffed;
+    border-radius:50%;
+    margin-right:6px;
+    cursor:pointer
+}
+
+.temoignages .carousel .carousel-dots .dot.active{
+    background: #e7e75a;
+}
+
+.temoignages .carousel .carousel-items{
+    overflow-x:hidden
+}
+
+.temoignages .carousel .carousel-items ul{
+    /*Nombre d'enfants li*/
+    --n:1;
+    --i:0;
+
+    padding:0;
+    width:100%;
+    width:calc(var(--n)*100%);
+    display: flex;
+    align-items: center;
+    transition:.3s;
+    cursor:default;
+    user-select: none;
+
+    /*
+        ul : width:400%(4enfants) 
+            Pour faire slider le carousel, on utilise translate
+                -25% pour afficher le premier enfant
+                -50% deuxième enfant
+                -...
+                -75% pour le 4e enfant
+
+        li : width:25% (pour chaque enfant li)
+        
+    */
+
+    transform: translate(calc(var(--i, 0)/var(--n)*-100%));
+}
+
+
+
+.temoignages .carousel .carousel-items ul li{
+    --n:1;
+    width:100%;
+    width:calc(100%/var(--n));
+}
+
+.temoignages .carousel .carousel-items ul li .testimonial{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.temoignages .carousel .carousel-items ul li .testimonial .quote-symbol img{
+    margin:20px 0 30px 50px;
+}
+
+.temoignages .carousel .carousel-items ul li .testimonial blockquote{
+    margin:0;
+}
+
+.temoignages .carousel .carousel-items ul li .testimonial blockquote + h3{
+    text-align: right;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.temoignages .carousel .carousel-items ul li .testimonial blockquote + h3 span{
+    color: #8e8e00;
+}
+
+.temoignages .carousel .carousel-items ul li .testimonial blockquote p{
+    text-align: center;
+    line-height: 1.5;
+}
+
+ @media only screen and (min-width:501px){
+    .temoignages .carousel .carousel-items ul li .testimonial{
+        width:80%;
+    }
+} 
+
+.temoignages .carousel .arrow{
+    display:block;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:20px;
+    width:40px;
+    height:40px;
+    background-color: #d0d0b2;
+    color:#1a1a01e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius:50%;
+    cursor:pointer;
+    z-index:1;
+}
+
+@media only screen and (min-width:768px){
+    .temoignages .carousel .arrow{
+        font-size:25px;
+        width:50px;
+        height:50px;
+    }
+     .temoignages .carousel .carousel-items ul li .testimonial{
+        width:75%;
+    } 
+}
+
+@media only screen and (min-width:1200px){
+    .temoignages .carousel .carousel-items ul li .testimonial{
+        width:65%;
+    }
+} 
+
+.temoignages .carousel .arrow-left{
+    left:0px;
+    transform: rotate(90deg);
+    padding-top:10px
+}
+
+.temoignages .carousel .arrow-right{
+    right:0px;
+    transform: rotate(-90deg);
+    padding-top:7px
+}
+
+
+
+@media only screen and (max-width:500px){
+    
+    .temoignages .carousel .carousel-items ul li .testimonial .quote-symbol img{
+        width:50px;
+    }
+
+    .temoignages .carousel .arrow{
+        display:none;
+    }
+
+}
+
+/*products*/
+
+.products {
+    padding:4rem 0 5rem;
+}
+
+.all-products{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap:3rem;
+    flex-wrap:wrap;
+    padding-top:2.5rem;
+}
+
+.card-product {
+    max-width:20rem;
+    border:2px solid #8181D0;
+    border-radius:16px;
+    background-image: url(./medias/images/home/products/card-bg.jpg);
+    background-repeat: no-repeat;
+    background-position:top -70px right -60px;
+    overflow: hidden;
+    height:22rem;
+    cursor:pointer;
+    transition:background-position .6s linear;
+    position:relative;
+}
+
+@media screen and (min-width:1200px) {
+    .all-products{
+        justify-content: space-between;
+    }
+}
+
+.card-image{
+    width:70%;
+    display: block;
+    margin:90px auto 0;
+    transition:.4s .2s linear;
+}
+
+
+.card-title{
+    text-align: center;
+    margin-top:20px;
+    transition:.4s .1s ease-in;
+}
+
+.card-description{
+    position:absolute;
+    bottom:-100%;
+    transition: .8s .1s ease-out;
+}
+
+.card-description,
+.card-title{
+    padding:0 0.63rem;
+}
+
+
+.card-description > .card-lk{
+    padding:0.63em 1.25em;
+    margin:0.7em 0 1em;
+    border-radius:5px;
+    display:inline-block;
+    background:#2f2f5a;
+    color:#dfdff8;
+    font-weight:700;
+}
+
+.card-description > .card-lk:hover{
+    background:#1a1a2e;
+}
+
+
+
+.card-product:hover{
+    background-position: top -150px right -60px;
+}
+
+.card-product:hover .card-image,
+.card-product + .card-product:hover .card-image{
+    transform: translateY(-60px);
+}
+
+.card-product:hover .card-title{
+    margin-top:-65px;
+}
+
+.card-product:hover .card-description{
+    bottom:0;
+}

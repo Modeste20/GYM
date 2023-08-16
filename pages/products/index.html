@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="icon" href="./../../medias/images/favicon/favicon-48x48.png" type="image/png">
+
+    <link rel="stylesheet" href="./../../global.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="input-range.css">
+
+    <title>Listing products page</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-navbar-open"></div>
+        <div class="container">
+            <div class="container-header">
+                <a href="/" class="logo">
+                    GYM
+                </a>
+
+                <nav class="header-navigation">
+                    <div class="times header-times">
+                        <div class="icon menu-times">*</div>
+                    </div>
+                    <ul class="header-menu">
+
+                        <li class="header-item">
+                             <a href="../about/">Notre Agence</a>
+                        </li>
+
+                        <li class="header-item">
+                            <a href="#!">Nos produits</a>
+                        </li>
+
+                        <li class="header-item">
+                            <a href="../pricing/">Nos tarifs</a>
+                        </li>
+
+                        <li class="header-item">
+                            <a href="../contact/" class="header-cta cta-button header-cta-mobile">Contactez-nous</a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <a href="../contact/" class="cta-button header-cta">
+                    Contactez-nous
+                </a>
+
+                <div class="icon menu-hamburger" id="menu-hamburger">H</div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="modal hidden">
+            <div class="modal-container">
+                <div class="icon times">*</div>
+                <div class="content">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <form class="filters" name="filters" id="filter">
+                <div class="icon times">*</div>
+                <div class="filter-header">
+                    <h4>Filter</h4>
+                    <button type="reset">Reset</button>
+                </div>
+                <div class="filter filter-price active">
+                    <div class="filter-header">
+                        <h4>Price</h4>
+                        <button>
+                            <span id="hide">Hide <img src="./../../medias/images/icons/chevron-up.png"></span>
+                            <span id="show">Show <img src="./../../medias/images/icons/chevron-down.png"></span>
+                        </button>
+                    </div>
+                    <div>
+                        <input type="range" class="range" name="price" id="price" min="0" max="5000" step="100" value="1000">
+                        <div class="price">
+                            <b>Maximum price : </b><span>$1000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter filter-city active">
+                    <div class="filter-header">
+                        <h4>City</h4>
+                        <button>
+                            <span id="hide">Hide <img src="./../../medias/images/icons/chevron-up.png"></span>
+                            <span id="show">Show <img src="./../../medias/images/icons/chevron-down.png"></span>
+                        </button>
+                    </div>
+                    <ul>
+                        <li>
+                            <label for="ny">
+                                <input type="checkbox" checked name="ny" id="ny" value="ny">
+                                New York
+                            </label>
+                        </li>
+                        <li>
+                            <label for="wh">
+                                <input type="checkbox" checked name="wh" id="wh" value="wh">
+                                Washington
+                            </label>
+                        </li>
+                        <li>
+                            <label for="ps">
+                                <input type="checkbox" name="ps" id="ps" value="ps">
+                                Paris
+                            </label>
+                        </li>
+                        <li>
+                            <label for="bl">
+                                <input type="checkbox" name="bl" id="bl" value="bl">
+                                Berlin
+                            </label>
+                        </li>
+                        <li>
+                            <label for="al">
+                                <input type="checkbox" name="al" id="al" value="al">
+                                Alger
+                            </label>
+                        </li>
+                    </ul>
+                </div> 
+
+                <div class="filter filter-gender active">
+                    <div class="filter-header">
+                        <h4>Gender</h4>
+                        <button>
+                            <span id="hide">Hide <img src="./../../medias/images/icons/chevron-up.png"></span>
+                            <span id="show">Show <img src="./../../medias/images/icons/chevron-down.png"></span>
+                        </button>
+                    </div>
+                    <ul>
+                        <li>
+                            <label for="man">
+                                <input type="radio" checked name="gender" id="man" value="man">
+                                Man
+                            </label>
+                        </li>
+                        <li>
+                            <label for="woman">
+                                <input type="radio" name="gender" id="woman" value="woman">
+                                Woman
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter filter-brand active" >
+                    <div class="filter-header">
+                        <h4>Brand</h4>
+                        <button>
+                            <span id="hide">Hide <img src="./../../medias/images/icons/chevron-up.png"></span>
+                            <span id="show">Show <img src="./../../medias/images/icons/chevron-down.png"></span>
+                        </button>
+                    </div>
+                    <ul>
+                        <li>
+                            <label for="addidas">
+                                <input type="checkbox" name="addidas" id="addidas" value="addidas">
+                                Addidas
+                            </label>
+                        </li>
+                        <li>
+                            <label for="nike">
+                                <input type="checkbox" name="nike" id="nike" value="nike">
+                                Nike
+                            </label>
+                        </li>
+                        <li>
+                            <label for="sneaker">
+                                <input type="checkbox" checked name="sneaker" id="sneaker" value="sneaker">
+                                Sneaker
+                            </label>
+                        </li>
+                        <li>
+                            <label for="others">
+                                <input type="checkbox" name="others" id="others" value="others">
+                                Others
+                            </label>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </form>
+            <section class="products" >
+                <div>
+                    <button class="btn">Filter</button>
+                </div>
+                <div class="products-container" id="products">
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <a href="/" class="footer-logo">GYM</a>
+            <nav class="footer-nav">
+                <a class="footer-link" href="../about/">About</a>
+                <a class="footer-link" href="../pricing/">pricing</a>
+                <a class="footer-link" href="#!">Product</a>
+                <a class="footer-link" href="../contact/">Contact Us</a>
+            </nav>
+            <div class="footer-divider"></div>
+            <small class="footer-sm"> &copy; Copyright GYM 2023</small>
+        </div>
+    </footer>
+
+    <script src="./../../index.js"></script>
+    <script src="products.js"></script>
+</body>
